@@ -15,7 +15,7 @@
   "dependencies": {
     "@zag-js/core": "^0.7.0",
     "@zag-js/solid": "latest",
-    "@zag-js/toggle": "^0.7.0",
+    "@zag-js/toggle": "^0.9.1",
     "solid-js": "^1.7.5"
   },
   "devDependencies": {

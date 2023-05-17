@@ -42,7 +42,7 @@
     "@solidjs/meta": "^0.28.4",
     "@solidjs/router": "^0.8.2",
     "@zag-js/solid": "^0.7.0",
-    "@zag-js/toggle": "^0.7.0",
+    "@zag-js/toggle": "^0.9.1",
     "eslint-config-base": "workspace:*",
     "solid-js": "^1.7.5",
     "solid-start": "^0.2.26",
