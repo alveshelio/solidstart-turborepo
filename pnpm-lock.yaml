@@ -9,7 +9,7 @@ importers:
         version: 2.8.8
       turbo:
         specifier: latest
-        version: 1.9.3
+        version: 1.9.8
 
   apps/web:
     dependencies:
@@ -23,8 +23,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0(solid-js@1.7.5)
       '@zag-js/toggle':
-        specifier: ^0.7.0
-        version: 0.7.0
+        specifier: ^0.9.1
+        version: 0.9.1
       eslint-config-base:
         specifier: workspace:*
         version: link:../../packages/eslint-config-base
@@ -164,14 +164,14 @@ importers:
   packages/ui:
     dependencies:
       '@zag-js/core':
-        specifier: ^0.7.0
-        version: 0.7.0
+        specifier: ^0.9.1
+        version: 0.9.1
       '@zag-js/solid':
         specifier: latest
         version: 0.7.0(solid-js@1.7.5)
       '@zag-js/toggle':
-        specifier: ^0.7.0
-        version: 0.7.0
+        specifier: ^0.9.1
+        version: 0.9.1
       solid-js:
         specifier: ^1.7.5
         version: 1.7.5
@@ -2369,8 +2369,8 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@zag-js/anatomy@0.1.4:
-    resolution: {integrity: sha512-Xc5QmQwY0W3VdkukYVaoujuCmgf0Y2ZbXhIBi0CJ0d8wWRwjkphhJu8l9kDyX4ElpyzvExYbrpTuQoI4BspaVQ==}
+  /@zag-js/anatomy@0.9.1:
+    resolution: {integrity: sha512-zCzbuVmth4Js9b7xcinEEUBzKVIKfENwsYeLweuapVRbT+IsiBMCI9fflvZha7hOAsG2m8mpgE+lCrWxL1PL/Q==}
     dev: false
 
   /@zag-js/core@0.7.0:
@@ -2380,8 +2380,15 @@ packages:
       klona: 2.0.6
     dev: false
 
-  /@zag-js/dom-query@0.1.4:
-    resolution: {integrity: sha512-s2q18k3z3ABAkySc6xK1NLPVIdgZGTLSZxok7yzpCYoywEeCnFvP6K63Q4ONElk74XgO7Eq8KMzIj702LDS+Mg==}
+  /@zag-js/core@0.9.1:
+    resolution: {integrity: sha512-EIBD4h5lki3aRjQeHARE2resu1AerCdLf9fjdyuk5B0xAq90m6f1zJOzc/GR/ZII5OQ5RVqbq+Y41OjwOWesnw==}
+    dependencies:
+      '@zag-js/store': 0.9.1
+      klona: 2.0.6
+    dev: false
+
+  /@zag-js/dom-query@0.9.1:
+    resolution: {integrity: sha512-dD/2Khz0Ywut8vp8AyS0VKguwtIpi/e20BnZMP9WlzFEmIvu5wxt0zHxRYR1DYgewyzW37z0eQSQlnJGC+9l1Q==}
     dev: false
 
   /@zag-js/solid@0.7.0(solid-js@1.7.5):
@@ -2402,14 +2409,20 @@ packages:
       proxy-compare: 2.5.0
     dev: false
 
-  /@zag-js/toggle@0.7.0:
-    resolution: {integrity: sha512-69DBPuoeXdqPuOCabLjGpyWuiXWfozwP4X0u5+jHrEQncMlf4ItHCeQSTevySH20PhYhbu/b2H6beJzf3t/HpQ==}
+  /@zag-js/store@0.9.1:
+    resolution: {integrity: sha512-9G184EgYmMNIKTH58GXlVAuWgbv35wkG6zJ9jDm0Eggb9KIRoR6VPEJwiFWfNR+jp8vdkk7oxz0lEipF/B8ulA==}
     dependencies:
-      '@zag-js/anatomy': 0.1.4
-      '@zag-js/core': 0.7.0
-      '@zag-js/dom-query': 0.1.4
-      '@zag-js/types': 0.5.0
-      '@zag-js/utils': 0.3.4
+      proxy-compare: 2.5.1
+    dev: false
+
+  /@zag-js/toggle@0.9.1:
+    resolution: {integrity: sha512-0c5hak6Z6dUDv9JOX57Jh7cKfXxic9Fh0uWL4RxfwFAV6rtExMGh+DP+3R7bbP6aV8xx1Tb4wAPvqW7uTmi+kA==}
+    dependencies:
+      '@zag-js/anatomy': 0.9.1
+      '@zag-js/core': 0.9.1
+      '@zag-js/dom-query': 0.9.1
+      '@zag-js/types': 0.9.1
+      '@zag-js/utils': 0.9.1
     dev: false
 
   /@zag-js/types@0.5.0:
@@ -2418,8 +2431,14 @@ packages:
       csstype: 3.1.1
     dev: false
 
-  /@zag-js/utils@0.3.4:
-    resolution: {integrity: sha512-Wz6OsvGsteCmu8uGot5H/xj0QpUzXlmAlDw+d2Lnqz1Y3uWcq36r6EPWfH15HXJXdEDuCameAmdOruZ0s/SVjA==}
+  /@zag-js/types@0.9.1:
+    resolution: {integrity: sha512-C3EPa//tzmKmQ2i1hsJBqbFcyOOKeg/CppT7HYzeVXURLYPAEtOR8AtjkXstQ8DTziX+lx014sDhGShD9JQW7w==}
+    dependencies:
+      csstype: 3.1.2
+    dev: false
+
+  /@zag-js/utils@0.9.1:
+    resolution: {integrity: sha512-zJWtEBAiAdkANofU+Jm+VzlBkK32C90bG2yHPmayIaSxGiCTfu1FuDMUu3rc6xaoyJrRXywexkqQl3jY4lp9Tw==}
     dev: false
 
   /@zxing/text-encoding@0.9.0:
@@ -5389,6 +5408,10 @@ packages:
     resolution: {integrity: sha512-f1us0OsVAJ3tdIMXGQx2lmseYS4YXe4W+sKF5g5ww/jV+5ogMadPt+sIZ+88Ga9kvMJsrRNWzCrKPpr6pMWYbA==}
     dev: false
 
+  /proxy-compare@2.5.1:
+    resolution: {integrity: sha512-oyfc0Tx87Cpwva5ZXezSp5V9vht1c7dZBhvuV/y3ctkgMVUmiAGDVeeB0dKhGSyT0v1ZTEQYpe/RXlBVBNuCLA==}
+    dev: false
+
   /ps-tree@1.2.0:
     resolution: {integrity: sha512-0VnamPPYHl4uaU/nSFeZZpR21QAWRz+sRv4iW9+v/GS/J5U5iZB5BNN6J0RMoOvdx2gWM2+ZFMIm58q24e4UYA==}
     engines: {node: '>= 0.10'}
@@ -6261,65 +6284,65 @@ packages:
       typescript: 5.0.4
     dev: true
 
-  /turbo-darwin-64@1.9.3:
-    resolution: {integrity: sha512-0dFc2cWXl82kRE4Z+QqPHhbEFEpUZho1msHXHWbz5+PqLxn8FY0lEVOHkq5tgKNNEd5KnGyj33gC/bHhpZOk5g==}
+  /turbo-darwin-64@1.9.8:
+    resolution: {integrity: sha512-PkTdBjPfgpj/Dob/6SjkzP0BBP80/KmFjLEocXVEECCLJE6tHKbWLRdvc79B0N6SufdYdZ1uvvoU3KPtBokSPw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64@1.9.3:
-    resolution: {integrity: sha512-1cYbjqLBA2zYE1nbf/qVnEkrHa4PkJJbLo7hnuMuGM0bPzh4+AnTNe98gELhqI1mkTWBu/XAEeF5u6dgz0jLNA==}
+  /turbo-darwin-arm64@1.9.8:
+    resolution: {integrity: sha512-sLwqOx3XV57QCEoJM9GnDDnnqidG8wf29ytxssBaWHBdeJTjupyrmzTUrX+tyKo3Q+CjWvbPLyqVqxT4g5NuXQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64@1.9.3:
-    resolution: {integrity: sha512-UuBPFefawEwpuxh5pM9Jqq3q4C8M0vYxVYlB3qea/nHQ80pxYq7ZcaLGEpb10SGnr3oMUUs1zZvkXWDNKCJb8Q==}
+  /turbo-linux-64@1.9.8:
+    resolution: {integrity: sha512-AMg6VT6sW7aOD1uOs5suxglXfTYz9T0uVyKGKokDweGOYTWmuTMGU5afUT1tYRUwQ+kVPJI+83Atl5Ob0oBsgw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64@1.9.3:
-    resolution: {integrity: sha512-vUrNGa3hyDtRh9W0MkO+l1dzP8Co2gKnOVmlJQW0hdpOlWlIh22nHNGGlICg+xFa2f9j4PbQlWTsc22c019s8Q==}
+  /turbo-linux-arm64@1.9.8:
+    resolution: {integrity: sha512-tLnxFv+OIklwTjiOZ8XMeEeRDAf150Ry4BCivNwgTVFAqQGEqkFP6KGBy56hb5RRF1frPQpoPGipJNVm7c8m1w==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64@1.9.3:
-    resolution: {integrity: sha512-0BZ7YaHs6r+K4ksqWus1GKK3W45DuDqlmfjm/yuUbTEVc8szmMCs12vugU2Zi5GdrdJSYfoKfEJ/PeegSLIQGQ==}
+  /turbo-windows-64@1.9.8:
+    resolution: {integrity: sha512-r3pCjvXTMR7kq2E3iqwFlN1R7pFO/TOsuUjMhOSPP7HwuuUIinAckU4I9foM3q7ZCQd1XXScBUt3niDyHijAqQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64@1.9.3:
-    resolution: {integrity: sha512-QJUYLSsxdXOsR1TquiOmLdAgtYcQ/RuSRpScGvnZb1hY0oLc7JWU0llkYB81wVtWs469y8H9O0cxbKwCZGR4RQ==}
+  /turbo-windows-arm64@1.9.8:
+    resolution: {integrity: sha512-CWzRbX2TM5IfHBC6uWM659qUOEDC4h0nn16ocG8yIq1IF3uZMzKRBHgGOT5m1BHom+R08V0NcjTmPRoqpiI0dg==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo@1.9.3:
-    resolution: {integrity: sha512-ID7mxmaLUPKG/hVkp+h0VuucB1U99RPCJD9cEuSEOdIPoSIuomcIClEJtKamUsdPLhLCud+BvapBNnhgh58Nzw==}
+  /turbo@1.9.8:
+    resolution: {integrity: sha512-dTouGZBm4a2fE0OPafcTQERCp4i3ZOow0Pr0JlOyxKmzJy0JRwXypH013kbZoK6k1ET5tS/g9rwUXIM/AmWXXQ==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.9.3
-      turbo-darwin-arm64: 1.9.3
-      turbo-linux-64: 1.9.3
-      turbo-linux-arm64: 1.9.3
-      turbo-windows-64: 1.9.3
-      turbo-windows-arm64: 1.9.3
+      turbo-darwin-64: 1.9.8
+      turbo-darwin-arm64: 1.9.8
+      turbo-linux-64: 1.9.8
+      turbo-linux-arm64: 1.9.8
+      turbo-windows-64: 1.9.8
+      turbo-windows-arm64: 1.9.8
     dev: true
 
   /type-check@0.4.0:
