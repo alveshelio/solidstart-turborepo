@@ -13,7 +13,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@zag-js/core": "^0.9.1",
+    "@zag-js/core": "^0.10.1",
     "@zag-js/solid": "latest",
     "@zag-js/toggle": "^0.9.1",
     "solid-js": "^1.7.5"
