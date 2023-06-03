@@ -1,14 +1,8 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsup-preset-solid';
 
-export default defineConfig((options) => ({
-  clean: true,
-  sourcemap: true,
-  tsconfig: './tsconfig.json',
-  splitting: true,
-  target: 'es6',
-  minify: !options.watch,
-  entry: ['./src/index.ts'],
-  format: ['esm'],
-  dts: true,
-  outDir: 'dist/',
-}));
+export default defineConfig([
+  {
+    entry: 'src/index.ts',
+    devEntry: true,
+  },
+]);
