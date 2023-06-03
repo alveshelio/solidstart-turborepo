@@ -1,15 +1,14 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from 'tsup';
 
 export default defineConfig((options) => ({
   clean: true,
   sourcemap: true,
-  tsconfig: "./tsconfig.json",
+  tsconfig: './tsconfig.json',
   splitting: true,
-  target: "es5",
+  target: 'es6',
   minify: !options.watch,
-  entry: ["./src/index.ts"],
-  external: ["solid-js", "solid-js/web"],
-  format: ["esm"],
+  entry: ['./src/index.ts'],
+  format: ['esm'],
   dts: true,
-  outDir: "dist/",
+  outDir: 'dist/',
 }));
