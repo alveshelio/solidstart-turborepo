@@ -17,6 +17,13 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   plugins: ['@typescript-eslint', 'solid', 'import', 'jsx-a11y', 'prettier', 'simple-import-sort'],
   rules: {
     'simple-import-sort/imports': 'error',
