@@ -1,14 +1,16 @@
+import '../../styles.css';
+
 import { normalizeProps, useMachine } from '@zag-js/solid';
 import { connect, machine } from '@zag-js/switch';
 import { MachineContext } from '@zag-js/switch/dist/switch.types';
-import { Component, createMemo, splitProps } from 'solid-js';
+import { createMemo, splitProps } from 'solid-js';
 
 type CheckboxProps = {
   onLabel: string;
   offLabel: string;
 } & Omit<MachineContext, 'id'>;
 
-export const Switch: Component<CheckboxProps> = (props) => {
+export const Switch = (props: CheckboxProps) => {
   const [local, rest] = splitProps(props, ['onLabel', 'offLabel']);
   const [state, send] = useMachine(machine({ id: '1', ...rest }));
 

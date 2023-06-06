@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  ignorePatterns: ['src/**/*.css'],
+  ignorePatterns: ['src/**/*.css', 'dist/**/*'],
   extends: [
     'base',
     'eslint:recommended',
@@ -16,6 +16,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: ['./tsconfig.json'],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   plugins: ['@typescript-eslint', 'solid', 'import', 'jsx-a11y', 'prettier', 'simple-import-sort'],
   rules: {

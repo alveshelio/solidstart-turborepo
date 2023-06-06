@@ -1,5 +1,6 @@
-import { createSignal } from "solid-js";
-import "../styles.css";
+import '../../styles.css';
+
+import { createSignal } from 'solid-js';
 
 export const Counter = () => {
   const [count, setCount] = createSignal(0);
