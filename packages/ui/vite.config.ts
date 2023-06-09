@@ -1,30 +1,41 @@
-import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import solidPlugin from 'vite-plugin-solid';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig } from "vite";
+import solidPlugin from "vite-plugin-solid";
+import dts from "vite-plugin-dts";
+import path from "path";
+import terser from "@rollup/plugin-terser";
 
 export default defineConfig({
   plugins: [
     solidPlugin(),
-    tsconfigPaths(),
     dts({
       insertTypesEntry: true,
-      exclude: ['node_modules/**', 'test-project/node_modules/**'],
+      outputDir: "dist",
     }),
   ],
   server: {
     port: 3000,
   },
   build: {
-    target: 'esnext',
+    target: "esnext",
     lib: {
-      entry: './src/index.tsx',
-      name: 'Ui',
+      entry: path.resolve(__dirname, "index.ts"),
+      formats: ["es"],
+      name: "UI",
       fileName: (format) => `index.${format}.js`,
-      formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['solid-js'],
+      external: ["solid-js", "solid-js/web"],
+      output: {
+        exports: "named",
+        globals: {
+          "solid-js": "Solid",
+          "solid-js/web": "SolidWeb",
+        },
+      },
+      plugins: [terser()],
     },
+    ssr: {},
+    sourcemap: true,
+    emptyOutDir: true,
   },
 });

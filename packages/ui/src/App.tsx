@@ -1,12 +1,8 @@
 import type { Component } from 'solid-js';
-import Comp from './Comp';
 
 const App: Component = () => {
   return (
-    <>
-      <h1>Hello world!!!!</h1>
-      <Comp />
-    </>
+    <p class="text-4xl text-green-700 text-center py-20">Hello tailwind!</p>
   );
 };
 

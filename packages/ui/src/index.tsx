@@ -1,1 +1,9 @@
-export { Counter, Switch } from './components';
+/* @refresh reload */
+import "./styles.css";
+import { render } from "solid-js/web";
+
+import App from "./App";
+
+const root = document.getElementById("root");
+
+render(() => <App />, root!);
